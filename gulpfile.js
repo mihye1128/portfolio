@@ -67,7 +67,7 @@ const pugOption = {
   pretty: true // みやすいコードでの出力
 }
 const imageminOption = [
-  imageminPngquant({ quality: '65-80' }),
+  imageminPngquant({ quality: [ 0.65, 0.8 ] }),
   imageminMozjpeg({ quality: '80' }),
   imagemin.gifsicle(),
   imagemin.optipng(),
