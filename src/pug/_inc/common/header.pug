@@ -14,5 +14,5 @@ header.header
       ul.header-sns
         - for (var i = 0; i < contact.length; i++)
           li.header-sns--item
-            a(class='header-sns--link '+contact[i]['icon'], href=contact[i]['url'], target="_blank")
+            a(class='header-sns--link '+contact[i]['icon'], href=contact[i]['url'], target="_blank", rel="noopener")
               i(class='icon-'+contact[i]['icon'])

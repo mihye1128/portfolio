@@ -3,8 +3,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  @include color(link, bg);
+  @include color(footer, bg);
   @include zIndex(header);
+  box-shadow: 0 -4px 5px rgba(0,0,0,.3);
   &-row {
     display: flex;
     align-items: center;
@@ -117,6 +118,7 @@
     top: 0;
     bottom: auto;
     background-color: rgba(255,255,255,.9);
+    box-shadow: none;
     &-row {
       font-size: 14px;
       padding: 1em 24px;

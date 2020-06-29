@@ -2,7 +2,7 @@ section#concept.concept
   .concept--main
     h1.concept--title #{pageTitle}
     p.concept--occupation !{occupation}
-    a.concept--btn(href="#points")
+    a.concept--btn(href="#points",  aria-label="スクロールする")
     ul.concept--list
       - for (var i = 0; i < gnav.length; i++)
         li.concept--item

@@ -1,6 +1,6 @@
 // export文を使ってhello関数を定義する。
 export function fadein() {
-  const triggerMargin = 300;
+  const triggerMargin = 200;
   const scrollAnimationElm = document.querySelectorAll('.js-fadein');
   const returnBtn = document.getElementById('js-return_top');
 

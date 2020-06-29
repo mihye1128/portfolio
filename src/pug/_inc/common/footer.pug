@@ -6,9 +6,9 @@ footer.footer
     ul.footer--list
       each item in contact
         li.footer--item
-          a.footer--link(href=item.url, target="_blank")
+          a.footer--link(href=item.url, target="_blank", rel="noopener", aria-label=item.title + 'から連絡する')
             i(class='icon-'+item.icon)
     p.footer--copy &copy; !{copy}.
-    a#js-return_top.footer--btn(href="#concept")
+    a#js-return_top.footer--btn(href="#concept", aria-label="トップへ戻る")
 
 script(src="/assets/js/main.js?20200630")

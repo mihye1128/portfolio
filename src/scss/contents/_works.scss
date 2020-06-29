@@ -86,7 +86,7 @@
     border-top-right-radius: 2px;
     font-size: 14px;
     @include color(white);
-    @include color(link, bg);
+    @include color(footer, bg);
   }
   &--tags {
     position: absolute;

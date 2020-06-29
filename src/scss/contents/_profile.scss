@@ -22,10 +22,13 @@
   }
   &--sns {
     font-size: 0.6em;
-    a {
-      @include color(link);
-      margin-left: 0.25em;
-      margin-right: 0.25em;
+  }
+  &--twitter {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    transition: opacity .3s;
+    &:hover {
+      opacity: 0.8;
     }
   }
   &--text {

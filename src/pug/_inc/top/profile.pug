@@ -37,7 +37,7 @@ section#profile.sec.profile
           br
           span.profile--sns
             | (
-            a(href=profileTwitter, target="_blank") #{profileSns}
+            a.profile--twitter(href=profileTwitter, target="_blank", rel="noopener") #{profileSns}
             | )
         dd.profile--text !{profileText}
     .profile--side
