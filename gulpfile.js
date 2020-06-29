@@ -117,6 +117,12 @@ gulp.task('fonts', (done) => {
   done()
 })
 
+gulp.task('copy', (done) => {
+  gulp.src(['./src/manifest.json', './src/service-worker.js', './src/icon-192x192.png', './src/icon-512x512.png'])
+    .pipe(gulp.dest(paths.html))
+  done()
+})
+
 gulp.task('imagemin', (done) => {
   gulp.src('./src/img/**/*')
     .pipe(imagemin(imageminOption))
@@ -147,7 +153,7 @@ gulp.task('watch', () => {
   gulp.watch('./src/js/**/*.js', gulp.series('webpack', 'reload'))
 })
 
-gulp.task('default', gulp.series('sass', 'pug', 'fonts', 'imagemin', 'webpack', 'server', 'watch'))
+gulp.task('default', gulp.series('sass', 'pug', 'fonts', 'copy', 'imagemin', 'webpack', 'server', 'watch'))
 
 gulp.task('ftp', () => {
   const ftpConfig = {

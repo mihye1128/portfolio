@@ -1,12 +1,10 @@
 meta(charset="UTF-8")
 meta(name="viewport", content="width=device-width, initial-scale=1.0")
 meta(http-equiv="X-UA-Compatible", content="ie=edge")
-meta(name="robots", content="noindex , nofollow")
 
 title #{pageTitle}
 meta(name="description", content=siteDescription)
-
-link(rel="stylesheet", href="/assets/css/style.css?20190515")
+link(rel="stylesheet", href="/assets/css/style.css?20200630")
 
 script
   | (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -14,3 +12,36 @@ script
   | j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   | 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   | })(window,document,'script','dataLayer','GTM-NTN66FN');
+
+link(rel="icon", href="/assets/img/favicon.png")
+link(rel="apple-touch-icon-precomposed", href="/assets/img/apple-touch-icon-precomposed.png", sizes="512x512")
+link(rel="apple-touch-icon", href="/assets/img/apple-touch-icon.png", sizes="180x180")
+
+meta(name="apple-mobile-web-app-title", content="sitename")
+meta(name="apple-mobile-web-app-capable", content="yes")
+meta(name="apple-mobile-web-app-status-bar-style", content="black")
+
+meta(property="og:locale", content="ja_JP")
+meta(property="og:type", content="website")
+meta(property="og:title", content=pageTitle)
+meta(property="og:site_name", content=pageTitle)
+meta(property="og:description", content=siteDescription)
+meta(name="twitter:site", content=twitterId)
+meta(name="twitter:card", content="summary")
+meta(property="og:url", content=siteUrl)
+meta(property="og:image", content=siteUrl + '/assets/img/' + siteImg)
+
+link(rel="manifest", href="/manifest.json")
+
+script
+  | document.addEventListener('DOMContentLoaded', function() {
+  | if ('serviceWorker' in navigator) {
+  | window.addEventListener('load', function() {
+  | navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+  | console.log('ServiceWorker registration successful with scope: ', registration.scope);
+  | }, function(err) {
+  | console.log('ServiceWorker registration failed: ', err);
+  | });
+  | });
+  | }
+  | }, false);
