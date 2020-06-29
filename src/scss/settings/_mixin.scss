@@ -1,0 +1,45 @@
+// フォントの各種設定
+@mixin baseFontSize() {
+  font-size: $font_size-base * 1px;
+}
+@mixin fontFamily($val: default) {
+  font-family: map-get($font_family, $val);
+}
+@mixin lineHeight($val: default) {
+  line-height: map-get($line_height, $val);
+}
+@mixin litterSpacing($val: default) {
+  letter-spacing: map-get($letter_spacing, $val);
+}
+@mixin  fontWeight($val: 4) {
+  font-weight: $val * 100;
+}
+
+// icomoonの各種設定
+@mixin icomoon($icon) {
+  content: '#{$icon}';
+  font-family: 'icomoon' !important;
+}
+
+// 色の設定
+@mixin color($color: font, $value: default) {
+  @if($value == default) {
+    color: map-get($colors, $color);
+  } @else if($value == bg ) {
+    background-color: map-get($colors, $color);
+  } @else if($value == bd ) {
+    border-color: map-get($colors, $color);
+  }
+}
+
+// ブレイクポイントの設定
+@mixin mq($breakpoint) {
+  @media only screen and (min-width: #{map-get($breakpoints, $breakpoint)}px) {
+    @content;
+  }
+}
+
+// z-indexの設定
+@mixin zIndex($key) {
+  z-index: map-get($layer, $key);
+}

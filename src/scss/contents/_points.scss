@@ -1,0 +1,35 @@
+.points {
+  &--list {
+    font-size: 16px;
+    @include lineHeight(s);
+  }
+  &--item {
+    position: relative;
+    padding-left: 32px;
+    &:not(:first-of-type) {
+      margin-top: 1em;
+    }
+  }
+  &--icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    margin-right: .5em;
+    @include color(link);
+    &.icon-star {
+      @include color(star);
+    }
+    &.icon-heart {
+      @include color(heart);
+    }
+  }
+  @include mq(md) {
+    &--list {
+      font-size: 18px;
+    }
+    &--item {
+      padding-left: 40px;
+    }
+  }
+}

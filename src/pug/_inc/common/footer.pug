@@ -1,0 +1,14 @@
+- var contactTitle = 'ご連絡には、<br>Twitter・Facebook・メールをご利用ください。';
+footer.footer
+  .container
+    p.footer--title #{pageTitle}
+    p.footer--contact !{contactTitle}
+    ul.footer--list
+      each item in contact
+        li.footer--item
+          a.footer--link(href=item.url, target="_blank")
+            i(class='icon-'+item.icon)
+    p.footer--copy &copy; !{copy}.
+    a#js-return_top.footer--btn(href="#concept")
+
+script(src="/assets/js/main.js")

@@ -1,0 +1,47 @@
+- var sectionTitle = 'Profile';
+- var sectionDescription = '簡単なプロフィールと経歴です。<br>SNSは、Twitterを主に利用しています。';
+- var profileName = 'mitsui';
+- var profileSns = '@mitsui_mk';
+- var profileTwitter = 'https://twitter.com/mitsui_mk';
+- var profileText = '1989年生まれ 広島市在住。<br>コーダーへの転職前は、会計事務所にて法人経理を担当していました。<br>経理の仕事は嫌いではなかったものの、新しいチャレンジを求め、転職を決意しました。<br>フロントエンドエンジニア勉強会「次元の狭間」を運営しています。';
+-
+  var careers = [
+    {
+      date: '2017.07',
+      text: '職業訓練校webクリエイター養成科(6ヶ月)へ入所。'
+    },
+    {
+      date: '2018.03',
+      text: 'Webアプリ開発・Web制作会社へ就職。<br>主にHTML/CSSコーディング、WordPressテーマ作成業務を担当。'
+    },
+    {
+      date: '2019.03',
+      text: '家庭の事情により、同社を退職。'
+    },
+    {
+      date: '2019.11',
+      text: '屋号を「ポラリス」とし、フリーランスでの活動を開始。'
+    },
+  ];
+
+section#profile.sec.profile
+  +sectionTitle(sectionTitle)
+  +sectionDiscription(sectionDescription)
+
+  article.container-box.profile--contents
+    .profile--main
+      dl.profile--data
+        .profile--img(style='background-image:url(/assets/img/common/icon-host.jpg);')
+        dt.profile--name
+          | #{profileName}
+          br
+          span.profile--sns
+            | (
+            a(href=profileTwitter, target="_blank") #{profileSns}
+            | )
+        dd.profile--text !{profileText}
+    .profile--side
+      dl.profile--career
+        each career in careers
+          dt #{career.date}
+          dd !{career.text}

@@ -1,0 +1,21 @@
+include _inc/config/config
+
+- var pageTitle = siteTitle;
+
+<!DOCTYPE html>
+html(lang="ja")
+  head
+    include _inc/common/head
+
+  body#js-body.js-preload
+    include _inc/common/header
+
+    main
+      include _inc/top/concept
+      include _inc/top/points
+      include _inc/top/works
+      include _inc/top/profile
+      include _inc/top/skills
+      include _inc/top/privacy
+
+    include _inc/common/footer

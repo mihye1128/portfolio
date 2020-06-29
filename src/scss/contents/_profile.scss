@@ -1,0 +1,116 @@
+.profile {
+  &--main {
+    border-radius: 1em;
+    @include color(main, bg);
+    padding: 1.5em;
+  }
+  &--img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-size: cover;
+  }
+  &--name {
+    margin-top: 0.5em;
+    text-align: center;
+    @include fontFamily(title);
+    @include fontWeight(7);
+    @include lineHeight(xs);
+    margin-bottom: 0.5em;
+    font-size: 24px;
+  }
+  &--sns {
+    font-size: 0.6em;
+    a {
+      @include color(link);
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+    }
+  }
+  &--text {
+    margin-top: 1em;
+    text-align: justify;
+    font-size: 14px;
+    @include lineHeight(s);
+  }
+  &--career {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    font-size: 14px;
+    @include lineHeight(s);
+    $title_width: 6em;
+    dt,
+    dd {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #ccc;
+      &:first-of-type {
+        border-top: 1px solid #ccc;
+      }
+    }
+    dt {
+      width: $title_width;
+      padding-left: 16px;
+      @include fontFamily(title);
+    }
+    dd {
+      text-align: justify;
+      padding-right: 16px;
+      width: calc( 100% - #{$title_width});
+    }
+  }
+
+  @include mq(sm) {
+    &--career {
+      $title_width: 7em;
+      dt {
+        width: $title_width;
+        padding-left: 24px;
+      }
+      dd {
+        padding-right: 24px;
+        width: calc( 100% - #{$title_width});
+      }
+    }
+  }
+  @include mq(md) {
+    &--contents {
+      display: flex;
+    }
+    &--main,
+    &--side {
+      width: calc( 50% - 16px);
+    }
+    &--side {
+      margin-left: 32px;
+    }
+    &--data {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &--img {
+      margin-left: 0;
+      margin-right: 2em;
+    }
+    &--name {
+      margin-top: 0;
+      margin-bottom: 0;
+      br {
+        display: none;
+      }
+    }
+    &--sns {
+      display: inline-block;
+      margin-left: 0.5em;
+    }
+    &--text {
+      margin-top: 16px;
+    }
+    &--career {
+      margin-top: 0;
+    }
+  }
+}

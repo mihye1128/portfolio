@@ -1,0 +1,50 @@
+- var siteTitle = "Mitsui's portfolio";
+- var siteDescription = '広島市在住のマークアップエンジニア  mitsuiのポートフォリオサイトです。';
+- var occupation = 'Markup engineer';
+- var copy = '2020 Mitsui&#39;s portfolio';
+
+-
+  var gnav = [
+    {
+      title: 'Points',
+      url: '#points',
+      icon: 'points'
+    },
+    {
+      title: 'Works',
+      url: '#works',
+      icon: 'works'
+    },
+    {
+      title: 'Profile',
+      url: '#profile',
+      icon: 'profile'
+    },
+    {
+      title: 'Skills',
+      url: '#skills',
+      icon: 'skills'
+    },
+  ];
+
+-
+  var contact = [
+    {
+      url: 'https://twitter.com/mitsui_mk',
+      icon: 'fa-twitter'
+    },
+    {
+      url: 'https://www.facebook.com/profile.php?id=100031156509738',
+      icon: 'fa-facebook'
+    },
+    {
+      url: 'mailTo:mitsui.polaris.code@gmail.com',
+      icon: 'gmail'
+    }
+  ];
+
+mixin sectionTitle(title)
+  h2.container.sec--title= title
+
+mixin sectionDiscription(description)
+  p.container.sec--description!= description
