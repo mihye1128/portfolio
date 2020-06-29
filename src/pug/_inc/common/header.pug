@@ -1,0 +1,18 @@
+
+noscript
+  iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NTN66FN", height="0", width="0", style="display:none;visibility:hidden")
+
+header.header
+  .header-row
+    a.header-sitetitle(href="#concept") #{pageTitle}
+    nav.header-gnav
+      ul.header-gnav--list
+        - for (var i = 0; i < gnav.length; i++)
+          li.header-gnav--item
+            a(class='header-gnav--link '+gnav[i]['icon'], href=gnav[i]['url'])
+              | #{gnav[i]['title']}
+      ul.header-sns
+        - for (var i = 0; i < contact.length; i++)
+          li.header-sns--item
+            a(class='header-sns--link '+contact[i]['icon'], href=contact[i]['url'], target="_blank", rel="noopener")
+              i(class='icon-'+contact[i]['icon'])

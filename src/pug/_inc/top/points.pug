@@ -1,0 +1,39 @@
+- var sectionTitle = 'Points';
+- var sectionDescription = 'お客様の想い・ユーザビリティを意識し、<br>品質の高いコーディングを目指します。';
+-
+  var points = [
+    {
+      icon: 'star',
+      comment: 'メンテナンス性を考慮したHTML/CSSコーディングを行います。'
+    },
+    {
+      icon: 'star',
+      comment: '使いやすい管理画面を意識したWordPressテーマ作成を行います。<small>（ほとんどACFProのおかげです。）</small>'
+    },
+    {
+      icon: 'star',
+      comment: 'Webサイト制作だけでなく、Bootstrapを用いた管理画面のUI作成の経験があります。'
+    },
+    {
+      icon: 'heart',
+      comment: 'フロントエンドエンジニアへのキャリアアップを目指します。焦らず一歩ずつチャレンジします！'
+    },
+    {
+      icon: 'heart',
+      comment: '一人もくもく作業したい派ですが、自分がどんな形でチームに貢献できるか意識しながらコミットします。'
+    },
+    {
+      icon: 'heart',
+      comment: '実務で役立つ場面はなさそうですが、韓国語サイトの閲覧、韓国語の入力ができます。'
+    },
+  ];
+
+section#points.sec.points
+  +sectionTitle(sectionTitle)
+  +sectionDiscription(sectionDescription)
+
+  ul.container-box.points--list
+    each point in points
+      li.points--item
+        i(class='points--icon icon-' + point.icon)
+        | !{point.comment}

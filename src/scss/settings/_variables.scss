@@ -1,0 +1,53 @@
+// フォントの設定
+$font_size-base: 16;
+$font_family: (
+  default: (游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif),
+  title: ('Rajdhani', sans-serif)
+);
+$line_height: (
+  default: 1.75,
+  xs: 1,
+  s: 1.5,
+  2: 2
+);
+$letter_spacing: (
+  default: normal,
+);
+
+// 色の設定
+$colors: (
+  main: #ffe578,
+  sub: #fdefb4,
+  base: #F6F3EE,
+  font: #423a24,
+  link: #F76B1C,
+  footer: #433f37,
+  star: #ffc107,
+  heart: #e34f26,
+  white: #fff,
+  facebook: #3B5998,
+  twitter: #1DA1F2,
+  mail: #d14836
+);
+
+// コンテナボックス最大幅の設定
+$container_box: (
+  default: 440,
+  sm: 552,
+  md: 976,
+);
+
+// ブレイクポイントの設定
+$breakpoints: (
+  sm: 600,
+  md: 1024,
+);
+
+// z-indexの設定
+$layer: (
+  modal: 100,
+  header: 20,
+  footer: 10,
+  concept: 30,
+  default: 1
+);

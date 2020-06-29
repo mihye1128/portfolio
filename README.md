@@ -1,7 +1,7 @@
 # Mitsui's portfolio
 
 ## 概要
-広島市在住のフロントエンドエンジニア mitsuiのポートフォリオサイトです。
+広島市在住のマークアップエンジニア  mitsuiのポートフォリオサイトです。
 
 ## 公開URL
 https://mitsui.site/

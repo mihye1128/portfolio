@@ -1,0 +1,153 @@
+- var sectionTitle = 'Skills';
+- var sectionDescription = 'マークアップ関連の実務経験は、1~2.5年です。<br>その他、現在学習中のものも掲載しています。';
+-
+  var skills = [
+    {
+      title: 'Developer tools',
+      contents: [
+        {
+          icon: 'visualstudiocode',
+          title: 'VSCode',
+          level: 4,
+          comment: 'コーディング時に採用しているエディタは、VSCodeです。以前は、Bracketsを利用していました。'
+        },
+        {
+          icon: 'git',
+          title: 'Git',
+          level: 3,
+          comment: '個人開発にてGithub、チーム開発にてBacklog,Bitbucketを利用した経験があります。'
+        },
+        {
+          icon: 'webpack',
+          title: 'Webpack',
+          level: 2,
+          comment: 'Webサイトの開発環境は、主にnpm-scriptsとWebpaackを使用しています。'
+        },
+        {
+          icon: 'gulp',
+          title: 'gulp',
+          level: 3,
+          comment: 'CSS周りの細かい設定を行いたい時は、Gulpを採用した開発環境を準備します。'
+        },
+      ],
+    },
+    {
+      title: 'Mark up',
+      contents: [
+        {
+          icon: 'html5',
+          title: 'HTML5',
+          level: 5,
+          comment: 'プリプロセッサには、案件によって、EJS或いはPugを採用しています。'
+        },
+        {
+          icon: 'css3',
+          title: 'CSS3',
+          level: 5,
+          comment: 'メンテナンス性やデザイン設計を意識したコーディングを心がけています。SCSSを採用しています。'
+        },
+      ],
+    },
+    {
+      title: 'JavaScript',
+      contents: [
+        {
+          icon: 'javascript',
+          title: 'JavaScript',
+          level: 3,
+          comment: 'アロー関数,クラスなど、ES2015の基礎を習得しました。Babelでのコンパイルを行います。'
+        },
+        {
+          icon: 'typescript',
+          title: 'TypeScript',
+          level: 1,
+          comment: '実務での経験は、ありません。AngularでのWebアプリ開発を行う過程で学習しています。'
+        },
+        {
+          icon: 'jquery',
+          title: 'jQuery',
+          level: 4,
+          comment: 'Web制作での一般的なアニメーションは、jQueryにて実装しています。'
+        },
+        {
+          icon: 'vue-dot-js',
+          title: 'Vue.js',
+          level: 1,
+          comment: '基本を学習しました。実務での採用やアウトプットはまだできていないので、今後取り入れていきたいと考えています。'
+        },
+        {
+          icon: 'angular',
+          title: 'Angular',
+          level: 1,
+          comment: '実務での経験は、ありません。現在、Angular Material,FireBaseを用いたアプリ開発を個人で行っています。'
+        },
+      ],
+    },
+    {
+      title: 'PHP',
+      contents: [
+        {
+          icon: 'php',
+          title: 'PHP',
+          level: 2,
+          comment: 'WordPressでのテーマファイル作成時に必要になる基本的な構文について習得しました。'
+        },
+        {
+          icon: 'wordpress',
+          title: 'WordPress',
+          level: 5,
+          comment: 'テーマの作成が可能です。ポータルサイトのテーマ作成経験があります。'
+        },
+        {
+          icon: 'vagrant',
+          title: 'Vagrant',
+          level: 2,
+          comment: 'WordPressサイトのローカル環境構築に用いました。最近は、Local by Flywheelにて構築しています。'
+        },
+      ],
+    },
+    {
+      title: 'Adobe',
+      contents: [
+        {
+          icon: 'adobeillustrator',
+          title: 'Illustrator',
+          level: 5,
+          comment: '基本的な操作とコーディングの際に必要な情報の抜き出し、画像の適切な書き出しを行うことができます。',
+        },
+        {
+          icon: 'adobephotoshop',
+          title: 'Photoshop',
+          level: 3,
+          comment: 'コーディングの際に必要な情報の抜き出し、画像の適切な書き出しを行うことができます。',
+        },
+        {
+          icon: 'adobexd',
+          title: 'Adobe XD',
+          level: 3,
+          comment: '実務での利用経験はありませんが、基本的な操作を行うことができます。'
+        },
+      ],
+    }
+  ];
+
+section#skills.sec.skills
+  +sectionTitle(sectionTitle)
+  +sectionDiscription(sectionDescription)
+
+  .container-box.skills--contents
+    each skill in skills
+      h3.skills--title #{skill.title}
+      .js-fadein.skills--list
+        each data in skill.contents
+          .skills--item
+            .skills--icon
+              i(class='icon-'+data.icon)
+            dl.skills--data
+              dt.skills--dt #{data.title}
+              dd.skills--level
+                - for (var i = 0; i < data.level; i++)
+                  i.icon-star
+                - for (var i = 0; i < 6 - data.level; i++)
+                  i.icon-star-o
+              dd.skills--comment !{data.comment}

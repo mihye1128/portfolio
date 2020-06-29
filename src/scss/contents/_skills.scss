@@ -1,0 +1,76 @@
+.skills {
+  &--title {
+    @include fontFamily(title);
+    @include fontWeight(7);
+    @include lineHeight(s);
+    font-size: 24px;
+    .skills--list + & {
+      margin-top: 40px;
+    }
+  }
+  &--list {
+    margin-top: 8px;
+  }
+  &--item {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    @include color(white, bg);
+    padding: 1.5em;
+    &:not(:first-of-type) {
+      margin-top: .5em;
+    }
+  }
+  $icon_width: 80px;
+  &--icon {
+    width: $icon_width;
+    i {
+      font-size: 48px;
+    }
+  }
+  &--data {
+    width: calc( 100% - #{$icon_width} );
+  }
+  &--dt {
+    @include fontFamily(title);
+    @include fontWeight(7);
+    @include lineHeight(xs);
+    font-size: 20px;
+  }
+  &--level {
+    margin-top: .75em;
+    @include color(star);
+    @include lineHeight(xs);
+    i {
+      &:not(:first-of-type) {
+        margin-left: 2px;
+      }
+    }
+  }
+  &--comment {
+    margin-top: 4px;
+    font-size: 12px;
+    @include lineHeight(s);
+  }
+  @include mq(md) {
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--item {
+      width: calc( 50% - 8px);
+      &:nth-of-type(even) {
+        margin-left: 16px;
+      }
+      &:nth-of-type(-n+2) {
+        margin-top: 0;
+      }
+      &:not(:nth-of-type(-n+2)) {
+        margin-top: 16px;
+      }
+    }
+    &--comment {
+      font-size: 14px;
+    }
+  }
+}
