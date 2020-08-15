@@ -145,9 +145,4 @@ section#skills.sec.skills
               i(class='icon-'+data.icon)
             dl.skills--data
               dt.skills--dt #{data.title}
-              dd.skills--level
-                - for (var i = 0; i < data.level; i++)
-                  i.icon-star
-                - for (var i = 0; i < 6 - data.level; i++)
-                  i.icon-star-o
               dd.skills--comment !{data.comment}

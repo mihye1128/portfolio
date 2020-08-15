@@ -37,16 +37,6 @@
     @include lineHeight(xs);
     font-size: 20px;
   }
-  &--level {
-    margin-top: .75em;
-    @include color(star);
-    @include lineHeight(xs);
-    i {
-      &:not(:first-of-type) {
-        margin-left: 2px;
-      }
-    }
-  }
   &--comment {
     margin-top: 4px;
     font-size: 12px;
@@ -58,18 +48,32 @@
       flex-wrap: wrap;
     }
     &--item {
-      width: calc( 50% - 8px);
-      &:nth-of-type(even) {
+      display: block;
+      padding: 2em 1.5em;
+      width: calc( 100%/3 - 32px/3);
+      &:not(:nth-of-type(3n+1)) {
         margin-left: 16px;
       }
-      &:nth-of-type(-n+2) {
+      &:nth-of-type(-n+3) {
         margin-top: 0;
       }
-      &:not(:nth-of-type(-n+2)) {
+      &:not(:nth-of-type(-n+3)) {
         margin-top: 16px;
       }
     }
+    &--icon {
+      width: 100%;
+      text-align: center;
+    }
+    &--data {
+      width:100%;
+      margin-top: 16px;
+    }
+    &--dt {
+      text-align: center;
+    }
     &--comment {
+      margin-top: 8px;
       font-size: 14px;
     }
   }
