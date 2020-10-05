@@ -2,6 +2,9 @@
   &--list {
     font-size: 16px;
     @include lineHeight(s);
+    @include mq(md) {
+      max-width: 700px;
+    }
   }
   &--item {
     position: relative;
