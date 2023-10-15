@@ -110,9 +110,6 @@
       &.fa-facebook {
         background-color: var(--color-facebook);
       }
-      &.gmail {
-        background-color: var(--color-mail);
-      }
     }
   }
   @include mq(sm) {
