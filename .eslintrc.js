@@ -3,6 +3,8 @@ module.exports = {
     "node_modules/**/*",
     "dist/assets/js/**/*",
     "src/service-worker.js",
+    "dist/service-worker.js",
+    ".stylelintrc.js",
   ],
   extends: [
     "plugin:@wordpress/eslint-plugin/recommended-with-formatting",
