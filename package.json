@@ -5,8 +5,24 @@
   "repository": "",
   "license": "MIT",
   "scripts": {
-    "prod": "webpack --mode production",
-    "dev": "webpack --mode development -w"
+    "prepare": "npx simple-git-hooks",
+    "build": "npx gulp build",
+    "start": "npx gulp",
+    "prettier": "prettier --check \"**/*.{js,ts,jsx,tsx,json,css,scss,yml}\"",
+    "prettier:fix": "prettier --write \"**/*.{js,ts,jsx,tsx,json,css,scss,yml}\"",
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint --fix \"**/*.{css,scss}\"",
+    "eslint": "eslint \"**/*.{js,ts,jsx,tsx}\"",
+    "eslint:fix": "eslint --fix \"**/*.{js,ts,jsx,tsx}\"",
+    "format": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx,json,css,scss,yml}": "npm run prettier:fix",
+    "**/*.{css,scss}": "npm run stylelint:fix",
+    "**/*.{js,ts,jsx,tsx}": "npm run eslint:fix"
   },
   "browserslist": [
     "last 2 Chrome versions",
