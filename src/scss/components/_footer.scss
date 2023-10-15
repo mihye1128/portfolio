@@ -6,29 +6,34 @@
   color: var(--color-white);
   text-align: center;
   background-color: var(--color-footer);
-  &--title {
+  @include mq(sm) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  &__title {
     font-family: var(--font-family-title);
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
   }
-  &--contact {
+  &__contact {
     margin-top: 3em;
     font-size: 14px;
     opacity: 0.8;
+    br {
+      @include mq(sm) {
+        display: none;
+      }
+    }
   }
-  &--list {
+  &__list {
     display: flex;
+    gap: 1em;
     align-items: center;
     justify-content: center;
     margin-top: 1.5em;
   }
-  &--item {
-    &:not(:last-of-type) {
-      margin-right: 1em;
-    }
-  }
-  &--link {
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,20 +43,19 @@
     color: var(--color-footer);
     background-color: var(--color-white);
     border-radius: 50%;
-    transition: 0.3s;
     transition: opacity 0.3s;
     &:hover {
       opacity: 0.8;
     }
   }
-  &--copy {
+  &__copy {
     margin-top: 3em;
     font-family: var(--font-family-title);
     font-size: 14px;
     line-height: 1;
     opacity: 0.8;
   }
-  &--btn {
+  &__btn {
     position: fixed;
     right: 16px;
     bottom: 72px;
@@ -64,24 +68,16 @@
     color: var(--color-white);
     background-color: var(--color-link);
     border-radius: 50%;
+    @include mq(sm) {
+      bottom: 16px;
+    }
+
     &:hover {
       opacity: 0.4;
     }
     &::after {
       font-family: icomoon !important;
       content: "\e90a";
-    }
-  }
-  @include mq(sm) {
-    padding-top: 4em;
-    padding-bottom: 4em;
-    &--contact {
-      br {
-        display: none;
-      }
-    }
-    &--btn {
-      bottom: 16px;
     }
   }
 }

@@ -1,14 +1,14 @@
 - var contactTitle = 'ご用件の方は、各種SNSよりご連絡お願いいたします。';
 footer.footer
   .container
-    p.footer--title #{pageTitle}
-    p.footer--contact !{contactTitle}
-    ul.footer--list
+    p.footer__title #{pageTitle}
+    p.footer__contact !{contactTitle}
+    ul.footer__list
       each item in contact
-        li.footer--item
-          a.footer--link(href=item.url, target="_blank", rel="noopener", aria-label=item.title + 'から連絡する')
+        li
+          a.footer__link(href=item.url, target="_blank", rel="noopener", aria-label=item.title + 'から連絡する')
             i(class='icon-'+item.icon)
-    p.footer--copy &copy; !{copy}.
-    a#js-return_top.footer--btn(href="#concept", aria-label="トップへ戻る")
+    p.footer__copy &copy; !{copy}.
+    a#js-return_top.footer__btn(href="#concept", aria-label="トップへ戻る")
 
-script(src="/assets/js/main.js?20200630")
+script(src="/assets/js/main.js?20231015")
