@@ -33,6 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: create a GitHub release
         uses: ncipollo/release-action@v1
+        id: create_release
         with:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release Test ${{ steps.tag_version.outputs.new_tag }}
