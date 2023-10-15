@@ -1,5 +1,5 @@
 - var sectionTitle = 'Works';
-- var sectionDescription = '制作に携わった案件を一部ご紹介致します。<br>守秘義務の都合上、公開できない案件も多数あります。';
+- var sectionDescription = '制作に携わった案件を一部ご紹介致します。<br>守秘義務の都合上、公開できない案件が多数あります。<br>2021年以降の実績については、各種SNSよりお問い合わせください。';
 -
   var works = [
     {
@@ -23,14 +23,24 @@
       comment: '当サイトです。開発環境構築では、Gulpを採用しました。'
     },
     {
+      title: 'ナッツ工房メープル 様<br>ECサイト リニューアル',
+      link: 'サイトを見る',
+      url: 'https://nutskobomaple.shop/',
+      img: 'maple.png',
+      date: '2019年10月頃',
+      role: 'WordPressテーマカスタマイズ',
+      tags: ['html5', 'css3', 'javascript', 'jquery' ,'php', 'wordpress'],
+      comment: '有料WordPressテーマとカートプラグインを利用し作成したECサイトです。'
+    },
+    {
       title: '株式会社GoQSystem 様<br>サービスサイト リニューアル',
       link: 'サイトを見る',
-      url: 'http://tiny.cc/m0xs4y',
+      url: 'https://goqsystem.com/',
       img: 'goqsystem.jpg',
       date: '2019年3月頃',
       role: 'コーディング・WP構築',
       tags: ['html5', 'css3', 'sass', 'bootstrap', 'javascript', 'jquery', 'php', 'wordpress'],
-      comment: '制作会社所属時の制作物。<br>Pug、Sassを用いた案件です。フレームワークにBootstrap4を使用しています。'
+      comment: '制作会社所属時の制作物。<br>Bootstrap4を使用しています。'
     },
     {
       title: '株式会社GoQSystem 様<br>採用サイト テンプレート作成',
@@ -45,23 +55,13 @@
     {
       title: '岩国市民文化会館 様<br>公式サイト 新規制作・CMS導入',
       link: 'サイトを見る',
-      url: 'http://tiny.cc/acys4y',
+      url: 'https://iwakuni-cityhall.com/',
       img: 'iwakunih.jpg',
       date: '2018年9月頃',
       role: 'コーディング・WP構築',
       tags: ['html5', 'css3', 'javascript', 'jquery', 'php', 'wordpress'],
       comment: '制作会社所属時の制作物。<br>イベントカレンダーには、WordPressプラグインを使用しています。'
     },
-    {
-      title: '株式会社GoQSystem 様<br>URL短縮ツール開発 コーディング担当',
-      link: 'サイトを見る',
-      url: 'http://tiny.cc/pfys4y',
-      img: 'goqshortener.jpg',
-      date: '2018年8月頃',
-      role: 'コーディング',
-      tags: ['html5', 'css3', 'javascript', 'jquery', 'php'],
-      comment: '制作会社所属時の制作物。<br>サービスサイト・管理画面のコーディングを担当しました。'
-    }
   ];
 
 section#works.sec.works
@@ -86,4 +86,4 @@ section#works.sec.works
           dl.works--data
             dt.works--dt 公開時期
             dd.works--dd #{work.date}
-        a.works--link(href=work.url, target="_blank", rel="noopener", aria-label=work.link)
+        a.works--link(href=work.url, target="_blank", rel="noopener noreferrer", aria-label=work.link)
