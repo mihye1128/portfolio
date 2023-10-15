@@ -3,6 +3,10 @@
 .sec {
   padding-top: 3em;
   padding-bottom: 3em;
+  @include mq(sm) {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
   &:nth-of-type(odd) {
     background-color: var(--color-base);
   }

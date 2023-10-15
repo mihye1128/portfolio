@@ -8,26 +8,38 @@
   justify-content: center;
   min-height: 100vh;
   background-image: linear-gradient(225deg, #ffe578 0%, #f76b1c 100%);
+  @include mq(sm) {
+    min-height: inherit;
+  }
 
-  &--main {
+  &__main {
     padding: 1em 1em 6em;
     font-family: var(--font-family-title);
     color: var(--color-white);
     text-align: center;
+    @include mq(sm) {
+      padding: 6em 1em;
+    }
   }
 
-  &--title {
+  &__title {
     font-size: 36px;
     font-weight: 700;
     line-height: 1;
+    @include mq(sm) {
+      font-size: 48px;
+    }
   }
 
-  &--occupation {
+  &__occupation {
     margin-top: 0.25em;
     font-size: 14px;
+    @include mq(sm) {
+      font-size: 16px;
+    }
   }
 
-  &--btn {
+  &__btn {
     position: relative;
     position: absolute;
     right: 0;
@@ -45,6 +57,9 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 50%;
+    @include mq(sm) {
+      display: none;
+    }
 
     &::before {
       font-family: icomoon !important;
@@ -86,14 +101,17 @@
     }
   }
 
-  &--list {
+  &__list {
     display: none;
     align-items: center;
     justify-content: center;
     margin-top: 3em;
+    @include mq(sm) {
+      display: flex;
+    }
   }
 
-  &--item {
+  &__item {
     &:not(:last-of-type) {
       &::after {
         padding-right: 0.5em;
@@ -103,7 +121,7 @@
     }
   }
 
-  &--link {
+  &__link {
     position: relative;
 
     &::after {
@@ -121,29 +139,6 @@
 
     &:hover::after {
       width: 100%;
-    }
-  }
-  @include mq(sm) {
-    min-height: inherit;
-
-    &--main {
-      padding: 6em 1em;
-    }
-
-    &--title {
-      font-size: 48px;
-    }
-
-    &--occupation {
-      font-size: 16px;
-    }
-
-    &--btn {
-      display: none;
-    }
-
-    &--list {
-      display: flex;
     }
   }
 }

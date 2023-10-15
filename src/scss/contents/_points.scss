@@ -1,21 +1,25 @@
 @use "../settings/mixin" as *;
 
 .points {
-  &--list {
+  &__list {
     font-size: 16px;
     line-height: 1.5;
     @include mq(md) {
       max-width: 700px;
+      font-size: 18px;
     }
   }
-  &--item {
+  &__item {
     position: relative;
     padding-left: 32px;
+    @include mq(md) {
+      padding-left: 40px;
+    }
     &:not(:first-of-type) {
       margin-top: 1em;
     }
   }
-  &--icon {
+  &__icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,14 +31,6 @@
     }
     &.icon-heart {
       color: var(--color-heart);
-    }
-  }
-  @include mq(md) {
-    &--list {
-      font-size: 18px;
-    }
-    &--item {
-      padding-left: 40px;
     }
   }
 }

@@ -1,9 +1,9 @@
 section#concept.concept
-  .concept--main
-    h1.concept--title #{pageTitle}
-    p.concept--occupation !{occupation}
-    a.concept--btn(href="#points",  aria-label="スクロールする")
-    ul.concept--list
+  .concept__main
+    h1.concept__title #{pageTitle}
+    p.concept__occupation !{occupation}
+    a.concept__btn(href="#points",  aria-label="スクロールする")
+    ul.concept__list
       - for (var i = 0; i < gnav.length; i++)
-        li.concept--item
-          a.concept--link(href=gnav[i]['url']) #{gnav[i]['title']}
+        li.concept__item
+          a.concept__link(href=gnav[i]['url']) #{gnav[i]['title']}

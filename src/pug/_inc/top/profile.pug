@@ -36,20 +36,20 @@ section#profile.sec.profile
   +sectionTitle(sectionTitle)
   +sectionDiscription(sectionDescription)
 
-  article.container-box.profile--contents
-    .profile--main
-      dl.profile--data
-        .profile--img(style='background-image:url(/assets/images/common/icon-host.jpg);')
-        dt.profile--name
+  article.container-box.profile__contents
+    .profile__main
+      dl.profile__data
+        .profile__img(style='background-image:url(/assets/images/common/icon-host.jpg);')
+        dt.profile__name
           | #{profileName}
           br
-          span.profile--sns
+          span.profile__sns
             | (
-            a.profile--twitter(href=profileTwitter, target="_blank", rel="noopener") #{profileSns}
+            a.profile__twitter(href=profileTwitter, target="_blank", rel="noopener") #{profileSns}
             | )
-        dd.profile--text !{profileText}
-    .profile--side
-      dl.profile--career
+        dd.profile__text !{profileText}
+    .profile__side
+      dl.profile__career
         each career in careers
           dt #{career.date}
           dd !{career.text}

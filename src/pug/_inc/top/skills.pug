@@ -111,14 +111,14 @@ section#skills.sec.skills
   +sectionTitle(sectionTitle)
   +sectionDiscription(sectionDescription)
 
-  .container-box.skills--contents
+  .container-box.skills__contents
     each skill in skills
-      h3.skills--title #{skill.title}
-      .js-fadein.skills--list
+      h3.skills__title #{skill.title}
+      .js-fadein.skills__list
         each data in skill.contents
-          .skills--item
-            .skills--icon
+          .skills__item
+            .skills__icon
               i(class='icon-'+data.icon)
-            dl.skills--data
-              dt.skills--dt #{data.title}
-              dd.skills--comment !{data.comment}
+            dl.skills__data
+              dt.skills__dt #{data.title}
+              dd.skills__comment !{data.comment}

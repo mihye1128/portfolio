@@ -68,22 +68,22 @@ section#works.sec.works
   +sectionTitle(sectionTitle)
   +sectionDiscription(sectionDescription)
 
-  .container-box.works--list
+  .container-box.works__list
     each work in works
-      article.js-fadein.works--item
-        .works--imgs
-          .works--img(style='background-image: url(/assets/images/works/'+work.img+')')
-          .works--more
+      article.js-fadein.works__item
+        .works__imgs
+          .works__img(style='background-image: url(/assets/images/works/'+work.img+')')
+          .works__more
             | !{work.link}
             i.icon-external-link
-          .works--role #{work.role}
-          .works--tags
+          .works__role #{work.role}
+          .works__tags
             each tag in work.tags
-              i(class='works--icon icon-'+tag)
-        .works--contents
-          h3.works--name !{work.title}
-          p.works--disc !{work.comment}
-          dl.works--data
-            dt.works--dt 公開時期
-            dd.works--dd #{work.date}
-        a.works--link(href=work.url, target="_blank", rel="noopener noreferrer", aria-label=work.link)
+              i(class='works__icon icon-'+tag)
+        .works__contents
+          h3.works__name !{work.title}
+          p.works__disc !{work.comment}
+          dl.works__data
+            dt.works__dt 公開時期
+            dd.works__dd #{work.date}
+        a.works__link(href=work.url, target="_blank", rel="noopener noreferrer", aria-label=work.link)

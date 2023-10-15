@@ -1,19 +1,37 @@
 @use "../settings/mixin" as *;
 
 .profile {
-  &--main {
+  &__contents {
+    display: grid;
+    gap: 2em;
+    @include mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__main {
     padding: 1.5em;
     background-color: var(--color-main);
     border-radius: 1em;
   }
-  &--img {
+  &__data {
+    @include mq(md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  &__img {
     width: 80px;
     height: 80px;
     margin: 0 auto;
     background-size: cover;
     border-radius: 50%;
+    @include mq(md) {
+      margin-right: 2em;
+      margin-left: 0;
+    }
   }
-  &--name {
+  &__name {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-family: var(--font-family-title);
@@ -21,11 +39,24 @@
     font-weight: 700;
     line-height: 1;
     text-align: center;
+    @include mq(md) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    br {
+      @include mq(md) {
+        display: none;
+      }
+    }
   }
-  &--sns {
+  &__sns {
     font-size: 0.6em;
+    @include mq(md) {
+      display: inline-block;
+      margin-left: 0.5em;
+    }
   }
-  &--twitter {
+  &__twitter {
     margin-right: 0.25em;
     margin-left: 0.25em;
     transition: opacity 0.3s;
@@ -33,28 +64,38 @@
       opacity: 0.8;
     }
   }
-  &--text {
+  &__text {
     margin-top: 1em;
     font-size: 14px;
     line-height: 1.5;
     text-align: justify;
+    @include mq(md) {
+      margin-top: 16px;
+    }
   }
-  &--career {
-    display: flex;
+  &__career {
+    display: grid;
     flex-wrap: wrap;
-    margin-top: 2em;
+    grid-template-columns: 6em 1fr;
     font-size: 14px;
     line-height: 1.5;
     $title_width: 6em;
+    @include mq(sm) {
+      grid-template-columns: 7em 1fr;
+    }
     dt {
-      width: $title_width;
       padding-left: 16px;
       font-family: var(--font-family-title);
+      @include mq(sm) {
+        padding-left: 24px;
+      }
     }
     dd {
-      width: calc(100% - #{$title_width});
       padding-right: 16px;
       text-align: justify;
+      @include mq(sm) {
+        padding-right: 24px;
+      }
     }
     dt,
     dd {
@@ -64,58 +105,6 @@
       &:first-of-type {
         border-top: 1px solid #ccc;
       }
-    }
-  }
-
-  @include mq(sm) {
-    &--career {
-      $title_width: 7em;
-      dt {
-        width: $title_width;
-        padding-left: 24px;
-      }
-      dd {
-        width: calc(100% - #{$title_width});
-        padding-right: 24px;
-      }
-    }
-  }
-  @include mq(md) {
-    &--contents {
-      display: flex;
-    }
-    &--main,
-    &--side {
-      width: calc(50% - 16px);
-    }
-    &--side {
-      margin-left: 32px;
-    }
-    &--data {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    &--img {
-      margin-right: 2em;
-      margin-left: 0;
-    }
-    &--name {
-      margin-top: 0;
-      margin-bottom: 0;
-      br {
-        display: none;
-      }
-    }
-    &--sns {
-      display: inline-block;
-      margin-left: 0.5em;
-    }
-    &--text {
-      margin-top: 16px;
-    }
-    &--career {
-      margin-top: 0;
     }
   }
 }

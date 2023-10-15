@@ -1,80 +1,66 @@
 @use "../settings/mixin" as *;
 
 .skills {
-  &--title {
+  &__title {
     font-family: var(--font-family-title);
     font-size: 24px;
     font-weight: 700;
     line-height: 1.5;
-    .skills--list + & {
+    .skills__list + & {
       margin-top: 40px;
     }
   }
-  &--list {
+  &__list {
+    display: grid;
+    gap: 0.5em;
     margin-top: 8px;
+    @include mq(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+    }
   }
-  &--item {
+  &__item {
     display: flex;
     align-items: center;
     padding: 1.5em;
     background-color: var(--color-white);
     border-radius: 4px;
-    &:not(:first-of-type) {
-      margin-top: 0.5em;
+    @include mq(md) {
+      display: block;
+      padding: 2em 1.5em;
     }
   }
-  $icon_width: 80px;
-  &--icon {
-    width: $icon_width;
+  &__icon {
+    width: 80px;
+    @include mq(md) {
+      width: 100%;
+      text-align: center;
+    }
     i {
       font-size: 48px;
     }
   }
-  &--data {
-    width: calc(100% - #{$icon_width});
+  &__data {
+    width: calc(100% - 80px);
+    @include mq(md) {
+      width: 100%;
+      margin-top: 16px;
+    }
   }
-  &--dt {
+  &__dt {
     font-family: var(--font-family-title);
     font-size: 20px;
     font-weight: 700;
     line-height: 1;
+    @include mq(md) {
+      text-align: center;
+    }
   }
-  &--comment {
+  &__comment {
     margin-top: 4px;
     font-size: 12px;
     line-height: 1.5;
-  }
-  @include mq(md) {
-    &--list {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    &--item {
-      display: block;
-      width: calc(100% / 3 - 32px / 3);
-      padding: 2em 1.5em;
-      &:not(:nth-of-type(3n + 1)) {
-        margin-left: 16px;
-      }
-      &:nth-of-type(-n + 3) {
-        margin-top: 0;
-      }
-      &:not(:nth-of-type(-n + 3)) {
-        margin-top: 16px;
-      }
-    }
-    &--icon {
-      width: 100%;
-      text-align: center;
-    }
-    &--data {
-      width: 100%;
-      margin-top: 16px;
-    }
-    &--dt {
-      text-align: center;
-    }
-    &--comment {
+    @include mq(md) {
       margin-top: 8px;
       font-size: 14px;
     }
