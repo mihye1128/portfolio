@@ -31,6 +31,18 @@ em {
   font-style: normal;
 }
 
+::-moz-selection {
+  color: var(--color-font);
+  text-shadow: none;
+  background-color: var(--color-main);
+}
+
+::selection {
+  color: var(--color-font);
+  text-shadow: none;
+  background-color: var(--color-main);
+}
+
 .js-preload * {
   transition: none !important;
 }
