@@ -1,8 +1,8 @@
 module.exports = {
-  mode: 'production',
-  entry: './src/js/main.js',
+  mode: "production",
+  entry: "./src/js/main.js",
   output: {
-    filename: 'assets/js/main.js'
+    filename: "js/[name].js",
   },
   module: {
     rules: [
@@ -12,13 +12,11 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: [
-                "@babel/preset-env"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  }
-}
+              presets: ["@babel/preset-env"],
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
