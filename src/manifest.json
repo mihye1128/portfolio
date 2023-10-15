@@ -1,24 +1,24 @@
 {
-    "name": "Mitsui's portfolio",
-    "short_name": "Mitsui's portfolio",
-    "description": "'広島市在住のマークアップエンジニア  mitsuiのポートフォリオサイト",
-    "start_url": "/?utm_source=homescreen&utm_medium=pwa",
-    "display": "standalone",
-    "lang": "ja",
-    "dir": "auto",
-    "orientation": "any",
-    "theme_color": "#ffe578",
-    "background_color": "#ffffff",
-    "icons": [
-        {
-            "src": "/icon-192x192.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/icon-512x512.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-        ]
+  "name": "Mitsui's portfolio",
+  "short_name": "Mitsui's portfolio",
+  "description": "'広島市在住のフロントエンドエンジニア  mitsuiのポートフォリオサイト",
+  "start_url": "/?utm_source=homescreen&utm_medium=pwa",
+  "display": "standalone",
+  "lang": "ja",
+  "dir": "auto",
+  "orientation": "any",
+  "theme_color": "#ffe578",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
+  ]
+}
