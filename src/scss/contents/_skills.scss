@@ -1,9 +1,11 @@
+@use "../settings/mixin" as *;
+
 .skills {
   &--title {
-    @include fontFamily(title);
-    @include fontWeight(7);
-    @include lineHeight(s);
+    font-family: var(--font-family-title);
     font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
     .skills--list + & {
       margin-top: 40px;
     }
@@ -14,11 +16,11 @@
   &--item {
     display: flex;
     align-items: center;
-    border-radius: 4px;
-    @include color(white, bg);
     padding: 1.5em;
+    background-color: var(--color-white);
+    border-radius: 4px;
     &:not(:first-of-type) {
-      margin-top: .5em;
+      margin-top: 0.5em;
     }
   }
   $icon_width: 80px;
@@ -29,18 +31,18 @@
     }
   }
   &--data {
-    width: calc( 100% - #{$icon_width} );
+    width: calc(100% - #{$icon_width});
   }
   &--dt {
-    @include fontFamily(title);
-    @include fontWeight(7);
-    @include lineHeight(xs);
+    font-family: var(--font-family-title);
     font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
   }
   &--comment {
     margin-top: 4px;
     font-size: 12px;
-    @include lineHeight(s);
+    line-height: 1.5;
   }
   @include mq(md) {
     &--list {
@@ -49,15 +51,15 @@
     }
     &--item {
       display: block;
+      width: calc(100% / 3 - 32px / 3);
       padding: 2em 1.5em;
-      width: calc( 100%/3 - 32px/3);
-      &:not(:nth-of-type(3n+1)) {
+      &:not(:nth-of-type(3n + 1)) {
         margin-left: 16px;
       }
-      &:nth-of-type(-n+3) {
+      &:nth-of-type(-n + 3) {
         margin-top: 0;
       }
-      &:not(:nth-of-type(-n+3)) {
+      &:not(:nth-of-type(-n + 3)) {
         margin-top: 16px;
       }
     }
@@ -66,7 +68,7 @@
       text-align: center;
     }
     &--data {
-      width:100%;
+      width: 100%;
       margin-top: 16px;
     }
     &--dt {

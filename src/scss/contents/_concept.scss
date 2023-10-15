@@ -1,125 +1,147 @@
+@use "../settings/mixin" as *;
+
 .concept {
-  min-height: 100vh;
+  position: relative;
+  z-index: var(--layer-concept);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(225deg, #ffe578 0%, #F76B1C 100%);
-  position: relative;
-  @include zIndex(concept);
+  min-height: 100vh;
+  background-image: linear-gradient(225deg, #ffe578 0%, #f76b1c 100%);
+
   &--main {
-    @include fontFamily(title);
     padding: 1em 1em 6em;
-    @include color(white);
+    font-family: var(--font-family-title);
+    color: var(--color-white);
     text-align: center;
   }
+
   &--title {
-    @include fontWeight(7);
-    line-height: 1;
     font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
   }
+
   &--occupation {
     margin-top: 0.25em;
     font-size: 14px;
   }
+
   &--btn {
+    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: 3em;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    position: absolute;
-    bottom: 3em;
-    left:0;
-    right: 0;
-    margin: 0 auto;
     width: 2.5em;
     height: 2.5em;
+    margin: 0 auto;
     font-size: 20px;
-    border-radius: 50%;
-    border-width: 1px;
+    color: var(--color-white);
+    border-color: var(--color-white);
     border-style: solid;
-    @include color(white);
-    @include color(white, bd);
+    border-width: 1px;
+    border-radius: 50%;
+
     &::before {
-      @include icomoon('\e907');
+      font-family: icomoon !important;
+      content: "\e907";
     }
+
     &::after {
       position: absolute;
       top: 0;
       left: 0;
       z-index: -1;
-      content: '';
+      box-sizing: border-box;
       width: 2.5em;
       height: 2.5em;
-      box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+      content: "";
       border-radius: 100%;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
       opacity: 0;
       -webkit-animation: sdb 3s infinite;
       animation: sdb 3s infinite;
-      box-sizing: border-box;
     }
     @keyframes sdb {
       0% {
         opacity: 0;
       }
+
       30% {
         opacity: 1;
       }
+
       60% {
-        box-shadow: 0 0 0 40px rgba(255,255,255,.1);
+        box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.1);
         opacity: 0;
       }
+
       100% {
         opacity: 0;
       }
     }
   }
+
   &--list {
     display: none;
     align-items: center;
     justify-content: center;
     margin-top: 3em;
   }
+
   &--item {
     &:not(:last-of-type) {
       &::after {
-      content: '/';
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        content: "/";
       }
     }
   }
+
   &--link {
     position: relative;
+
     &::after {
-      content: '';
       position: absolute;
       bottom: -0.4em;
       left: 50%;
-      transform: translateX(-50%);
       width: 0;
       height: 2px;
+      content: "";
+      background-color: var(--color-white);
       border-radius: 2px;
-      @include color(white, bg);
-      transition: width .3s;
+      transition: width 0.3s;
+      transform: translateX(-50%);
     }
+
     &:hover::after {
       width: 100%;
     }
   }
   @include mq(sm) {
     min-height: inherit;
+
     &--main {
       padding: 6em 1em;
     }
+
     &--title {
       font-size: 48px;
     }
+
     &--occupation {
       font-size: 16px;
     }
+
     &--btn {
       display: none;
     }
+
     &--list {
       display: flex;
     }

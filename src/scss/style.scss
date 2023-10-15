@@ -1,21 +1,21 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Rajdhani');
 
-@import 'settings/variables';
-@import 'settings/mixin';
+@forward "settings/variables";
 
-@import 'base/ress';
-@import 'base/base';
-@import 'base/icon';
-@import 'base/animation';
+@forward "base/ress";
+@forward "base/base";
+@forward "base/icon";
+@forward "base/animation";
 
-@import 'components/header';
-@import 'components/footer';
-@import 'components/section';
+@forward "components/header";
+@forward "components/footer";
+@forward "components/section";
 
-@import 'contents/concept';
-@import 'contents/points';
-@import 'contents/works';
-@import 'contents/profile';
-@import 'contents/skills';
-@import 'contents/privacy';
+@forward "contents/concept";
+@forward "contents/points";
+@forward "contents/works";
+@forward "contents/profile";
+@forward "contents/skills";
+@forward "contents/privacy";
+
+@import url("https://fonts.googleapis.com/css?family=Rajdhani");

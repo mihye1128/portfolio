@@ -1,19 +1,21 @@
+@use "../settings/mixin" as *;
+
 .footer {
-  @include color(footer, bg);
-  @include color(white);
-  text-align: center;
   padding-top: 3em;
   padding-bottom: 6em;
+  color: var(--color-white);
+  text-align: center;
+  background-color: var(--color-footer);
   &--title {
-    @include fontFamily(title);
-    @include fontWeight(7);
+    font-family: var(--font-family-title);
     font-size: 24px;
+    font-weight: 700;
     line-height: 1;
   }
   &--contact {
     margin-top: 3em;
     font-size: 14px;
-    opacity: .8;
+    opacity: 0.8;
   }
   &--list {
     display: flex;
@@ -30,43 +32,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    @include color(white, bg);
-    @include color(footer);
-    transition: .3s;
-    font-size: 16px;
     width: 2.5em;
     height: 2.5em;
-    transition: opacity .3s;
+    font-size: 16px;
+    color: var(--color-footer);
+    background-color: var(--color-white);
+    border-radius: 50%;
+    transition: 0.3s;
+    transition: opacity 0.3s;
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
   &--copy {
-    opacity: .8;
-    @include fontFamily(title);
-    font-size: 14px;
     margin-top: 3em;
+    font-family: var(--font-family-title);
+    font-size: 14px;
     line-height: 1;
+    opacity: 0.8;
   }
   &--btn {
     position: fixed;
-    bottom: 72px;
     right: 16px;
+    bottom: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include color(link, bg);
-    @include color(white);
-    font-size: 24px;
     width: 56px;
     height: 56px;
+    font-size: 24px;
+    color: var(--color-white);
+    background-color: var(--color-link);
     border-radius: 50%;
     &:hover {
-      opacity: .4;
+      opacity: 0.4;
     }
     &::after {
-      @include icomoon('\e90a');
+      font-family: icomoon !important;
+      content: "\e90a";
     }
   }
   @include mq(sm) {

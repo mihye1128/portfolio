@@ -1,298 +1,377 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?k6uajj');
-  src:  url('../fonts/icomoon.eot?k6uajj#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?k6uajj') format('truetype'),
-    url('../fonts/icomoon.woff?k6uajj') format('woff'),
-    url('../fonts/icomoon.svg?k6uajj#icomoon') format('svg');
-  font-weight: normal;
+  font-family: icomoon;
   font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/icomoon.eot?k6uajj");
+  src: url("../fonts/icomoon.eot?k6uajj#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?k6uajj") format("truetype"),
+    url("../fonts/icomoon.woff?k6uajj") format("woff"),
+    url("../fonts/icomoon.svg?k6uajj#icomoon") format("svg");
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: icomoon !important;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
+  text-transform: none;
+  speak: never;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-heart:before {
+.icon-heart::before {
   content: "\f004";
 }
-.icon-star:before {
+
+.icon-star::before {
   content: "\f005";
 }
-.icon-star-o:before {
+
+.icon-star-o::before {
   content: "\f006";
 }
-.icon-fa-twitter:before {
+
+.icon-fa-twitter::before {
+  color: #1da1f2;
   content: "\f099";
-  color: #1DA1F2,
 }
-.icon-fa-facebook:before {
+
+.icon-fa-facebook::before {
+  color: #3b5998;
   content: "\f09a";
-  color: #3B5998;
 }
-.icon-arrow-down:before {
+
+.icon-arrow-down::before {
   content: "\e900";
 }
-.icon-arrow-left:before {
+
+.icon-arrow-left::before {
   content: "\e901";
 }
-.icon-arrow-right:before {
+
+.icon-arrow-right::before {
   content: "\e902";
 }
-.icon-arrow-up:before {
+
+.icon-arrow-up::before {
   content: "\e903";
 }
-.icon-award:before {
+
+.icon-award::before {
   content: "\e904";
 }
-.icon-calendar:before {
+
+.icon-calendar::before {
   content: "\e905";
 }
-.icon-check-square:before {
+
+.icon-check-square::before {
   content: "\e906";
 }
-.icon-chevron-down:before {
+
+.icon-chevron-down::before {
   content: "\e907";
 }
-.icon-chevron-left:before {
+
+.icon-chevron-left::before {
   content: "\e908";
 }
-.icon-chevron-right:before {
+
+.icon-chevron-right::before {
   content: "\e909";
 }
-.icon-chevron-up:before {
+
+.icon-chevron-up::before {
   content: "\e90a";
 }
-.icon-clipboard:before {
+
+.icon-clipboard::before {
   content: "\e90b";
 }
-.icon-clock:before {
+
+.icon-clock::before {
   content: "\e90c";
 }
-.icon-coffee:before {
+
+.icon-coffee::before {
   content: "\e90d";
 }
-.icon-external-link:before {
+
+.icon-external-link::before {
   content: "\e90e";
 }
-.icon-facebook:before {
+
+.icon-facebook::before {
+  color: #3b5998;
   content: "\e90f";
-  color: #3B5998;
 }
-.icon-flag:before {
+
+.icon-flag::before {
   content: "\e910";
 }
-.icon-folder:before {
+
+.icon-folder::before {
   content: "\e911";
 }
-.icon-globe:before {
+
+.icon-globe::before {
   content: "\e913";
 }
-.icon-headphones:before {
+
+.icon-headphones::before {
   content: "\e914";
 }
-.icon-help-circle:before {
+
+.icon-help-circle::before {
   content: "\e916";
 }
-.icon-home:before {
+
+.icon-home::before {
   content: "\e917";
 }
-.icon-info:before {
+
+.icon-info::before {
   content: "\e918";
 }
-.icon-instagram:before {
+
+.icon-instagram::before {
   content: "\e919";
 }
-.icon-layout:before {
+
+.icon-layout::before {
   content: "\e91a";
 }
-.icon-list:before {
+
+.icon-list::before {
   content: "\e91b";
 }
-.icon-mail:before {
+
+.icon-mail::before {
   content: "\e91c";
 }
-.icon-monitor:before {
+
+.icon-monitor::before {
   content: "\e91d";
 }
-.icon-moon:before {
+
+.icon-moon::before {
   content: "\e91e";
 }
-.icon-more-vertical:before {
+
+.icon-more-vertical::before {
   content: "\e91f";
 }
-.icon-plus:before {
+
+.icon-plus::before {
   content: "\e920";
 }
-.icon-settings:before {
+
+.icon-settings::before {
   content: "\e921";
 }
-.icon-sidebar:before {
+
+.icon-sidebar::before {
   content: "\e923";
 }
-.icon-slack:before {
+
+.icon-slack::before {
   content: "\e924";
 }
-.icon-smartphone:before {
+
+.icon-smartphone::before {
   content: "\e925";
 }
-.icon-tablet:before {
+
+.icon-tablet::before {
   content: "\e927";
 }
-.icon-tag:before {
+
+.icon-tag::before {
   content: "\e928";
 }
-.icon-terminal:before {
+
+.icon-terminal::before {
   content: "\e929";
 }
-.icon-thumbs-down:before {
+
+.icon-thumbs-down::before {
   content: "\e92a";
 }
-.icon-thumbs-up:before {
+
+.icon-thumbs-up::before {
   content: "\e92b";
 }
-.icon-trending-up:before {
+
+.icon-trending-up::before {
   content: "\e92c";
 }
-.icon-triangle:before {
+
+.icon-triangle::before {
   content: "\e92d";
 }
-.icon-twitter:before {
+
+.icon-twitter::before {
+  color: #1da1f2;
   content: "\e92e";
-  color: #1DA1F2;
 }
-.icon-user:before {
+
+.icon-user::before {
   content: "\e92f";
 }
-.icon-adobe:before {
-  content: "\e930";
+
+.icon-adobe::before {
   color: #f00;
+  content: "\e930";
 }
-.icon-adobeillustrator:before {
-  content: "\e931";
+
+.icon-adobeillustrator::before {
   color: #ff7c00;
+  content: "\e931";
 }
-.icon-adobephotoshop:before {
-  content: "\e932";
+
+.icon-adobephotoshop::before {
   color: #00c8ff;
+  content: "\e932";
 }
-.icon-adobexd:before {
-  content: "\e933";
+
+.icon-adobexd::before {
   color: #ff2bc2;
+  content: "\e933";
 }
-.icon-angular:before {
-  content: "\e934";
+
+.icon-angular::before {
   color: #dd0031;
+  content: "\e934";
 }
-.icon-atom:before {
-  content: "\e935";
+
+.icon-atom::before {
   color: #66595c;
+  content: "\e935";
 }
-.icon-bootstrap:before {
-  content: "\e936";
+
+.icon-bootstrap::before {
   color: #563d7c;
+  content: "\e936";
 }
-.icon-css3:before {
-  content: "\e937";
+
+.icon-css3::before {
   color: #1572b6;
+  content: "\e937";
 }
-.icon-filezilla:before {
-  content: "\e939";
+
+.icon-filezilla::before {
   color: #bf0000;
+  content: "\e939";
 }
-.icon-flutter:before {
-  content: "\e93a";
+
+.icon-flutter::before {
   color: #02569b;
+  content: "\e93a";
 }
-.icon-git:before {
-  content: "\e93b";
+
+.icon-git::before {
   color: #f05032;
+  content: "\e93b";
 }
-.icon-github:before {
+
+.icon-github::before {
   content: "\e93c";
 }
-.icon-gmail:before {
-  content: "\e93d";
+
+.icon-gmail::before {
   color: #d14836;
+  content: "\e93d";
 }
-.icon-gulp:before {
-  content: "\e93e";
+
+.icon-gulp::before {
   color: #da4648;
+  content: "\e93e";
 }
-.icon-html5:before {
-  content: "\e93f";
+
+.icon-html5::before {
   color: #e34f26;
+  content: "\e93f";
 }
-.icon-javascript:before {
-  content: "\e941";
+
+.icon-javascript::before {
   color: #f7df1e;
+  content: "\e941";
 }
-.icon-jquery:before {
-  content: "\e942";
+
+.icon-jquery::before {
   color: #0769ad;
+  content: "\e942";
 }
-.icon-laravel:before {
-  content: "\e943";
+
+.icon-laravel::before {
   color: #ff2d20;
+  content: "\e943";
 }
-.icon-npm:before {
-  content: "\e944";
+
+.icon-npm::before {
   color: #cb3837;
+  content: "\e944";
 }
-.icon-php:before {
-  content: "\e945";
+
+.icon-php::before {
   color: #777bb4;
+  content: "\e945";
 }
-.icon-powershell:before {
-  content: "\e946";
+
+.icon-powershell::before {
   color: #5391fe;
+  content: "\e946";
 }
-.icon-react:before {
-  content: "\e947";
+
+.icon-react::before {
   color: #61dafb;
+  content: "\e947";
 }
-.icon-sass:before {
-  content: "\e948";
+
+.icon-sass::before {
   color: #c69;
+  content: "\e948";
 }
-.icon-typescript:before {
+
+.icon-typescript::before {
+  color: #007acc;
   content: "\e94a";
-  color: #007acc;
 }
-.icon-vagrant:before {
-  content: "\e94b";
+
+.icon-vagrant::before {
   color: #1563ff;
+  content: "\e94b";
 }
-.icon-visualstudiocode:before {
-  content: "\e94c";
+
+.icon-visualstudiocode::before {
   color: #007acc;
+  content: "\e94c";
 }
-.icon-vue-dot-js:before {
-  content: "\e94d";
+
+.icon-vue-dot-js::before {
   color: #4fc08d;
+  content: "\e94d";
 }
-.icon-webpack:before {
-  content: "\e94e";
+
+.icon-webpack::before {
   color: #8dd6f9;
+  content: "\e94e";
 }
-.icon-wordpress:before {
-  content: "\e94f";
+
+.icon-wordpress::before {
   color: #21759b;
+  content: "\e94f";
 }
-.icon-code:before {
+
+.icon-code::before {
   content: "\e950";
 }
-.icon-laptop-phone:before {
+
+.icon-laptop-phone::before {
   content: "\e951";
 }

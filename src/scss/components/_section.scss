@@ -1,21 +1,23 @@
+@use "../settings/mixin" as *;
+
 .sec {
   padding-top: 3em;
   padding-bottom: 3em;
   &:nth-of-type(odd) {
-    @include color(base, bg);
+    background-color: var(--color-base);
   }
   &--title {
-    @include fontFamily(title);
-    text-transform: uppercase;
-    text-align: center;
     margin-bottom: 1em;
-    line-height: 1;
+    font-family: var(--font-family-title);
     font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
   }
   &--description {
-    text-align: center;
     margin-bottom: 3em;
     font-size: 13px;
+    text-align: center;
   }
   @include mq(sm) {
     padding-top: 6em;

@@ -1,7 +1,7 @@
 .js-fadein {
   opacity: 0;
+  transition: all 0.5s;
   transform: translateY(40px);
-  transition: all .5s;
   &.show {
     opacity: 1;
     transform: translateY(0);
@@ -10,10 +10,10 @@
 
 #js-return_top {
   opacity: 0;
+  transition: all 0.5s;
   transform: translateY(40px);
-  transition: all .5s;
   &.show {
-    opacity: .6;
+    opacity: 0.6;
     transform: translateY(0);
   }
 }

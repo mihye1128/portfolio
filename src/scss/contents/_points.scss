@@ -1,7 +1,9 @@
+@use "../settings/mixin" as *;
+
 .points {
   &--list {
     font-size: 16px;
-    @include lineHeight(s);
+    line-height: 1.5;
     @include mq(md) {
       max-width: 700px;
     }
@@ -15,16 +17,16 @@
   }
   &--icon {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
+    margin-right: 0.5em;
     font-size: 24px;
-    margin-right: .5em;
-    @include color(link);
+    color: var(--color-link);
     &.icon-star {
-      @include color(star);
+      color: var(--color-star);
     }
     &.icon-heart {
-      @include color(heart);
+      color: var(--color-heart);
     }
   }
   @include mq(md) {
