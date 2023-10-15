@@ -6,6 +6,12 @@ node_modules/
 
 # IDEs and editors
 .idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
 # IDE - VSCode
 .vscode/*
@@ -16,7 +22,7 @@ node_modules/
 .history/*
 
 # System Files
-.DS_Store/
+.DS_Store
 
 # Logs
 logs
@@ -24,3 +30,20 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Package Manager
+package.json
+package-lock.json
+yarn.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+
+# Markdown files
+*.md

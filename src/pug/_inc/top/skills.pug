@@ -9,7 +9,7 @@
           icon: 'visualstudiocode',
           title: 'VSCode',
           level: 4,
-          comment: 'コーディング時に採用しているエディタは、VSCodeです。以前は、Bracketsを利用していました。'
+          comment: 'コーディング時に採用しているエディタは、VSCodeです。'
         },
         {
           icon: 'git',
@@ -18,16 +18,10 @@
           comment: 'チーム開発にて、Github,Backlog,Bitbucketを利用した経験があります。'
         },
         {
-          icon: 'webpack',
-          title: 'Webpack',
-          level: 2,
-          comment: 'Webサイトの開発環境は、主にnpm-scriptsとWebpaackを使用しています。'
-        },
-        {
           icon: 'gulp',
           title: 'gulp',
           level: 3,
-          comment: 'CSS周りの細かい設定を行いたい時は、Gulpを採用した開発環境を準備します。'
+          comment: '静的サイトの開発環境構築は、GulpとWebpaackを採用しています。'
         },
       ],
     },
@@ -55,7 +49,7 @@
           icon: 'javascript',
           title: 'JavaScript',
           level: 3,
-          comment: 'アロー関数,クラスなど、ES2015の基礎を習得しました。Babelでのコンパイルを行います。'
+          comment: 'フレームワークにjQuery, vue.js, react.jsを採用した開発経験もあります。'
         },
         {
           icon: 'typescript',
@@ -64,22 +58,10 @@
           comment: 'AngularでのWebアプリ開発を行う過程で学習しました。'
         },
         {
-          icon: 'jquery',
-          title: 'jQuery',
-          level: 4,
-          comment: 'Web制作での一般的なアニメーションは、jQueryにて実装しています。'
-        },
-        {
-          icon: 'vue-dot-js',
-          title: 'Vue.js',
-          level: 1,
-          comment: '基本を学習しました。実務での採用やアウトプットはまだできていないので、今後取り入れていきたいと考えています。'
-        },
-        {
           icon: 'angular',
           title: 'Angular',
           level: 1,
-          comment: 'Angular Material,FireBaseを用いて、給与試算ツールを開発しました。'
+          comment: 'Angular案件への参画経験があります。'
         },
       ],
     },
@@ -90,13 +72,13 @@
           icon: 'php',
           title: 'PHP',
           level: 2,
-          comment: 'WordPressでのテーマファイル作成時に必要になる基本的な構文について習得しました。'
+          comment: 'WordPressでのテーマ開発時に必要になる基本的な構文について習得しました。'
         },
         {
           icon: 'wordpress',
           title: 'WordPress',
           level: 5,
-          comment: 'テーマの作成が可能です。ポータルサイトのテーマ作成経験があります。'
+          comment: 'ポータルサイトのテーマ作成経験、Gutenbergブロック開発経験があります。'
         },
       ],
     },
@@ -129,14 +111,14 @@ section#skills.sec.skills
   +sectionTitle(sectionTitle)
   +sectionDiscription(sectionDescription)
 
-  .container-box.skills--contents
+  .container-box.skills__contents
     each skill in skills
-      h3.skills--title #{skill.title}
-      .js-fadein.skills--list
+      h3.skills__title #{skill.title}
+      .js-fadein.skills__list
         each data in skill.contents
-          .skills--item
-            .skills--icon
+          .skills__item
+            .skills__icon
               i(class='icon-'+data.icon)
-            dl.skills--data
-              dt.skills--dt #{data.title}
-              dd.skills--comment !{data.comment}
+            dl.skills__data
+              dt.skills__dt #{data.title}
+              dd.skills__comment !{data.comment}

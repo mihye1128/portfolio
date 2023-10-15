@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.format.enable": false,
+  "scss.format.enable": false,
+  "stylelint.stylelintPath": "node_modules/stylelint",
+  "scss.validate": false,
+  "css.validate": false,
+  "stylelint.validate": ["css", "scss"]
+}

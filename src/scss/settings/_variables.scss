@@ -1,53 +1,43 @@
-// フォントの設定
-$font_size-base: 16;
-$font_family: (
-  default: (游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif),
-  title: ('Rajdhani', sans-serif)
-);
-$line_height: (
-  default: 1.75,
-  xs: 1,
-  s: 1.5,
-  2: 2
-);
-$letter_spacing: (
-  default: normal,
-);
-
 // 色の設定
 $colors: (
   main: #ffe578,
   sub: #fdefb4,
-  base: #F6F3EE,
+  base: #f6f3ee,
   font: #423a24,
-  link: #F76B1C,
+  link: #f76b1c,
   footer: #433f37,
   star: #ffc107,
   heart: #e34f26,
   white: #fff,
-  facebook: #3B5998,
-  twitter: #1DA1F2,
-  mail: #d14836
+  facebook: #3b5998,
+  twitter: #1da1f2,
+  mail: #d14836,
 );
 
-// コンテナボックス最大幅の設定
-$container_box: (
-  default: 440,
-  sm: 552,
-  md: 976,
-);
+:root {
+  --color-main: #ffe578;
+  --color-sub: #fdefb4;
+  --color-base: #f6f3ee;
+  --color-font: #423a24;
+  --color-link: #f76b1c;
+  --color-footer: #433f37;
+  --color-star: #ffc107;
+  --color-heart: #e34f26;
+  --color-white: #fff;
+  --color-facebook: #3b5998;
+  --color-twitter: #1da1f2;
 
-// ブレイクポイントの設定
-$breakpoints: (
-  sm: 600,
-  md: 1024,
-);
+  --letter-spacing-default: normal;
+  --font-family-default: 游ゴシック体, "Yu Gothic", yugothic,
+    "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, meiryo,
+    osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  --font-family-title: "Rajdhani", sans-serif;
+  --font-size-base: 16px;
 
-// z-indexの設定
-$layer: (
-  modal: 100,
-  header: 20,
-  footer: 10,
-  concept: 30,
-  default: 1
-);
+  --container-box-width-default: 440px;
+  --container-box-width-sm: 552px;
+  --container-box-width-md: 976px;
+
+  --layer-header: 20;
+  --layer-concept: 30;
+}

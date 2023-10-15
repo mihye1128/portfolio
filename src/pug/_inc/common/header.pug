@@ -4,15 +4,15 @@ noscript
 
 header.header
   .header-row
-    a.header-sitetitle(href="#concept") #{pageTitle}
+    a.header-site-title(href="#concept") #{pageTitle}
     nav.header-gnav
-      ul.header-gnav--list
+      ul.header-gnav__list
         - for (var i = 0; i < gnav.length; i++)
-          li.header-gnav--item
-            a(class='header-gnav--link '+gnav[i]['icon'], href=gnav[i]['url'])
+          li.header-gnav__item
+            a(class='header-gnav__link '+gnav[i]['icon'], href=gnav[i]['url'])
               | #{gnav[i]['title']}
       ul.header-sns
         - for (var i = 0; i < contact.length; i++)
-          li.header-sns--item
-            a(class='header-sns--link '+contact[i]['icon'], href=contact[i]['url'], target="_blank", rel="noopener")
+          li
+            a(class='header-sns__link '+contact[i]['icon'], href=contact[i]['url'], target="_blank", rel="noopener")
               i(class='icon-'+contact[i]['icon'])

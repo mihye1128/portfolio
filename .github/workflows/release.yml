@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Upload Release Asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@master
+      - name: install dependencies
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: remove node_modules
+        run: rm -rf ./node_modules
+      - name: zip
+        run: zip -r mitsui-portfolio.zip ./dist
+      - name: bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: create a GitHub release
+        uses: ncipollo/release-action@v1
+        id: create_release
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release Test ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+          draft: false
+          prerelease: false
+      - name: upload release asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./mitsui-portfolio.zip
+          asset_name: mitsui-portfolio.zip
+          asset_content_type: application/zip

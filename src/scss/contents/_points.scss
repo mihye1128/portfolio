@@ -1,38 +1,36 @@
+@use "../settings/mixin" as *;
+
 .points {
-  &--list {
+  &__list {
     font-size: 16px;
-    @include lineHeight(s);
+    line-height: 1.5;
     @include mq(md) {
       max-width: 700px;
+      font-size: 18px;
     }
   }
-  &--item {
+  &__item {
     position: relative;
     padding-left: 32px;
+    @include mq(md) {
+      padding-left: 40px;
+    }
     &:not(:first-of-type) {
       margin-top: 1em;
     }
   }
-  &--icon {
+  &__icon {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
+    margin-right: 0.5em;
     font-size: 24px;
-    margin-right: .5em;
-    @include color(link);
+    color: var(--color-link);
     &.icon-star {
-      @include color(star);
+      color: var(--color-star);
     }
     &.icon-heart {
-      @include color(heart);
-    }
-  }
-  @include mq(md) {
-    &--list {
-      font-size: 18px;
-    }
-    &--item {
-      padding-left: 40px;
+      color: var(--color-heart);
     }
   }
 }

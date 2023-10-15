@@ -1,14 +1,16 @@
+@use "../settings/mixin" as *;
+
 .privacy {
   padding-top: 2em;
   padding-bottom: 2em;
-  &--contents {
-    font-size: 12px;
-    opacity: .8;
-  }
   @include mq(sm) {
     padding-top: 3em;
     padding-bottom: 3em;
-    &--contents {
+  }
+  &__contents {
+    font-size: 12px;
+    opacity: 0.8;
+    @include mq(sm) {
       font-size: 14px;
     }
   }

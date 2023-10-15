@@ -1,177 +1,187 @@
+@use "../settings/mixin" as *;
+
 .header {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: var(--layer-header);
   width: 100%;
-  @include color(footer, bg);
-  @include zIndex(header);
-  box-shadow: 0 -4px 5px rgba(0,0,0,.3);
-  &-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
-    @include fontFamily(title);
-  }
-  &-sitetitle {
-    @include fontWeight(7);
-    display: none;
-    transition: .3s;
-    &:hover {
-      @include color(link);
-    }
-  }
-  &-gnav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    &--list {
-      width: 100%;
-      display: flex;
-      align-items: center;
-    }
-    &--item {
-      width: 25%;
-    }
-    &--link {
-      display: block;
-      text-align: center;
-      @include color(white);
-      padding-top: 8px;
-      padding-bottom: 12px;
-      line-height: 1;
-      &::before {
-        font-family: 'icomoon' !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        display: block;
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 4px;
-      }
-      &.points {
-        &::before {
-          content: '\e906';
-        }
-      }
-      &.works {
-        &::before {
-          content: '\e911';
-        }
-      }
-      &.profile {
-        &::before {
-          content: '\e92f';
-        }
-      }
-      &.skills {
-        &::before {
-          content: '\e92c';
-        }
-      }
-    }
-  }
-  &-sns {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    &--item {
-      &:not(:last-of-type) {
-        margin-right: .5em;
-      }
-    }
-    &--link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      color: white !important;
-      transition: .3s;
-      font-size: 16px;
-      width: 2em;
-      height: 2em;
-      i::before {
-        @include color(white);
-      }
-      &:hover {
-        box-shadow: 0 4px 5px rgba(0,0,0,.3);
-      }
-      &.fa-twitter {
-
-        @include color(twitter, bg);
-      }
-      &.fa-facebook {
-        @include color(facebook, bg);
-      }
-      &.gmail {
-        @include color(mail, bg);
-      }
-    }
-  }
+  background-color: var(--color-footer);
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
   @include mq(sm) {
     top: 0;
     bottom: auto;
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: none;
-    &-row {
-      font-size: 14px;
-      padding: 1em 24px;
+  }
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-title);
+  font-size: 12px;
+  @include mq(sm) {
+    padding: 1em 24px;
+    font-size: 14px;
+  }
+}
+
+.header-site-title {
+  display: none;
+  font-weight: 700;
+  transition: 0.3s;
+  @include mq(sm) {
+    display: block;
+  }
+
+  &:hover {
+    color: var(--color-link);
+  }
+}
+
+.header-gnav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  @include mq(sm) {
+    width: auto;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include mq(sm) {
+      padding-right: 1em;
     }
-    &-sitetitle {
-      display: block;
-    }
-    &-gnav {
+  }
+  &__item {
+    width: 25%;
+    @include mq(sm) {
       width: auto;
-      &--list {
-        width: auto;
-        padding-right: 1em;
-      }
-      &--item {
-        width: auto;
-        &:not(:last-of-type) {
-          &::after {
-          content: '/';
-          padding-left: 0.5em;
+    }
+    &:not(:last-of-type) {
+      &::after {
+        @include mq(sm) {
           padding-right: 0.5em;
-          }
+          padding-left: 0.5em;
+          content: "/";
         }
       }
-      &--link {
-        position: relative;
-        display: inline;
-        padding: 0;
-        @include color(font);
-        transition: .3s;
-        &::before {
-          content: none;
-          display: none;
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -0.4em;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 0;
-          height: 2px;
-          border-radius: 2px;
-          @include color(link, bg);
-          transition: width .3s;
-        }
-        &:hover::after {
+    }
+  }
+  &__link {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    line-height: 1;
+    color: var(--color-white);
+    text-align: center;
+    @include mq(sm) {
+      position: relative;
+      display: inline;
+      padding: 0;
+      color: var(--color-font);
+      transition: 0.3s;
+    }
+
+    &::before {
+      display: block;
+      margin-bottom: 4px;
+      font-family: icomoon !important;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      line-height: 1;
+      text-align: center;
+      text-transform: none;
+      speak: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @include mq(sm) {
+        display: none;
+        content: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: -0.4em;
+      left: 50%;
+      display: none;
+      width: 0;
+      height: 2px;
+      content: "";
+      background-color: var(--color-link);
+      border-radius: 2px;
+      transition: width 0.3s;
+      transform: translateX(-50%);
+      @include mq(sm) {
+        display: block;
+      }
+    }
+    &:hover {
+      &::after {
+        @include mq(sm) {
           width: 100%;
         }
       }
     }
-    &-sns {
-      display: flex;
+
+    &.points {
+      &::before {
+        content: "\e906";
+      }
+    }
+    &.works {
+      &::before {
+        content: "\e911";
+      }
+    }
+    &.profile {
+      &::before {
+        content: "\e92f";
+      }
+    }
+    &.skills {
+      &::before {
+        content: "\e92c";
+      }
     }
   }
 }
 
+.header-sns {
+  display: none;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  @include mq(sm) {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    font-size: 16px;
+    color: #fff !important;
+    border-radius: 50%;
+    transition: 0.3s;
+    i::before {
+      color: var(--color-white);
+    }
+    &:hover {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    }
+    &.fa-twitter {
+      background-color: var(--color-twitter);
+    }
+    &.fa-facebook {
+      background-color: var(--color-facebook);
+    }
+  }
+}

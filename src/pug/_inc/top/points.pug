@@ -12,7 +12,7 @@
     },
     {
       icon: 'star',
-      comment: 'Angular / Vue.js などのフロントエンドフレームワークを用いた開発経験があります。'
+      comment: 'Angular, React.js などフロントエンドフレームワークを用いた開発経験があります。'
     },
     {
       icon: 'heart',
@@ -28,8 +28,8 @@ section#points.sec.points
   +sectionTitle(sectionTitle)
   +sectionDiscription(sectionDescription)
 
-  ul.container-box.points--list
+  ul.container-box.points__list
     each point in points
-      li.points--item
-        i(class='points--icon icon-' + point.icon)
+      li.points__item
+        i(class='points__icon icon-' + point.icon)
         | !{point.comment}
