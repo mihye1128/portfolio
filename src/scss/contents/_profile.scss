@@ -6,6 +6,7 @@
     gap: 2em;
     @include mq(md) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 2.5em;
     }
   }
   &__main {

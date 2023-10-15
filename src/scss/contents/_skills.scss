@@ -12,11 +12,11 @@
   }
   &__list {
     display: grid;
-    gap: 0.5em;
+    gap: 1.25em;
     margin-top: 8px;
     @include mq(md) {
       grid-template-columns: repeat(3, 1fr);
-      gap: 1em;
+      gap: 2em;
     }
   }
   &__item {
