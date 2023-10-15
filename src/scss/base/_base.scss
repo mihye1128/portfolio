@@ -24,6 +24,10 @@ ol {
 a {
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 i,
@@ -49,8 +53,7 @@ em {
 
 .container {
   width: calc(100% - 32px);
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   @include mq(sm) {
     width: calc(100% - 48px);
   }
@@ -59,8 +62,7 @@ em {
 .container-box {
   width: calc(100% - 32px);
   max-width: var(--container-box-width-default);
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   @include mq(sm) {
     width: calc(100% - 48px);
     max-width: var(--container-box-width-sm);
